@@ -1,7 +1,5 @@
 <?php
-	// Page for a user to signup.
-	// This is a presentational page. I.E : It does not have any signup logic associated with it.
-	// For that, check signup-conf.php
+	// Page for a user to login.
 
 	session_start();
 
@@ -43,7 +41,10 @@
 					?>
 						<div class="formContainer">
 
-							<form action="login-conf.php" id='rlform' method="POST">
+							<form action="login-conf.php" class='rlform' method="POST">
+								<h3>Login</h3>
+								<br/>
+
 								<label for="email">Email : </label>
 								<input type="email" name="email" class="form-control" placeholder="abcd@xyz.com"  required/>
 								
@@ -65,6 +66,7 @@
 				}
 			?>
 		</div>
+		<?php include './fragments/footer.html'; ?>
 	</main>
 </body>
 </html>

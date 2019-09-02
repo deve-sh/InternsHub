@@ -36,8 +36,8 @@ body{
 
 #header{
 	padding: 0;
-	background: teal;
-	color: #ffffff;
+	background: #007bff;
+	color: #fff;
 	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
@@ -46,7 +46,7 @@ body{
 }
 
 #header a{
-	color: #ffffff;
+	color: #fff;
 	text-decoration: none;
 }
 
@@ -101,6 +101,111 @@ body{
 	cursor: pointer;
 }
 
+/* Signup and Signin Page Styles */
+
+.formContainer{
+	min-height: 80vh;
+	text-align: center;
+}
+
+.rlform{
+	display: inline-block;
+	min-width: 70%;
+	padding: 0.5rem;
+	margin: 0 auto;
+	text-align: left;
+}
+
+/* Internships page. */
+
+.internships{
+	min-height: 80vh;
+}
+
+.roundedIcon{
+	padding: 2rem;
+	border-radius: 50%;
+	background : #efefef;
+	color: #bfbfbf;
+	display: inline-block;
+}
+
+.internship{
+	border: 0.1rem solid #cfcfcf;
+	border-radius: 0.35rem;
+}
+
+.internship .int-title{
+	font-weight: normal;
+	padding: 0.75rem 1rem;
+	font-size: 1.2rem;
+}
+
+.internship .empname{
+	font-weight: bold;
+	padding: 0 1rem;
+	font-size: 1.07rem;
+}
+
+.internship .location{
+	padding: 0.35rem 1rem;
+}
+
+.internship .int-details{
+	background: #efefef;
+	padding: 0.75rem;
+	text-align: center;
+}
+
+.pager{
+	list-style: none;
+}
+
+.pager li{
+	display: inline;
+}
+
+.pager li:hover{
+	background: #efefef;
+}
+
+.pager .previous, .pager .next{
+	background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 0.4rem 1rem;
+    border-radius: 0.5rem;
+}
+
+.pager a{
+	text-decoration: none;
+}
+
+.bottomLine{
+	border: none;
+	height: 0.15rem;
+	background: #afafaf;
+	width: 60%;
+}
+
+/* Footer */
+
+#footer{
+	background: #212121;
+	color: #ffffff;
+	padding: 0;
+}
+
+#footer a{
+	color: #ffffff;
+	text-decoration: none;
+}
+
+#footer .fixedContainer{
+	padding: 2rem;
+}
+
+/* Styles for a responsive app. */
+
 @media only screen and (max-width: 600px){
 	#sidenavContainer{
 		display: inline-block;		/* Display the side navigation toggle. */
@@ -108,5 +213,14 @@ body{
 
 	#menuContainer{
 		display: none;
+	}
+
+	.rlform{
+		min-width: 95%;
+	}
+
+	.internship .int-details{
+		text-align: left;
+		padding: 0.5rem 0rem;
 	}
 }

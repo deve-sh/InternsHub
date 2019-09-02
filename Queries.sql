@@ -22,16 +22,23 @@ CREATE TABLE internshub_users(
 -- Internships Table --
 
 CREATE TABLE internshub_internships(
+	-- Auto Filled Fields, will be filled in by the application itself. --
+
 	intid integer primary key auto_increment,
 	userid integer references internshub_users(userid) on delete cascade on update set null,
-	title varchar(255) not null default "",
-	details text default "",
+	empname text,	-- Employer Name --
 	created timestamp,
+
+	-- Fields to be filled in by the employer. --
+
+	title varchar(255) not null default "",
+	details text default "",	-- Details of the internship. --
 	start_date date not null,
+	duration text not null,		-- n Weeks/Months, etc. --
 	stipend numeric not null,
-	category text not null,
-	type text,	-- Work from home / Part Time / Full Time --
-	skills_required text default ""
+	apply_by date not null,
+	location text not null,				-- Work From Home / Location --
+	skills_required text default ""		-- A comma seperated text with skills required. --
 );
 
 -- Applications Table --

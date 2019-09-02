@@ -13,7 +13,7 @@
 	<title>
 		<?php
 			echo $config["appname"];
-		?> - Signup
+		?> - Login
 	</title>
 
 	<?php include ('./fragments/head.html'); ?>
@@ -42,7 +42,10 @@
 					?>
 						<div class="formContainer">
 
-							<form action="signup-conf.php" id='rlform' method="POST">
+							<form action="signup-conf.php" class='rlform' method="POST">
+								<h3>Sign Up</h3>
+								<br/>
+
 								<label for="name">Name : </label>
 								<input type="text" name="name" class="form-control" placeholder="Your Name"  required/>
 								
@@ -81,6 +84,7 @@
 				}
 			?>
 		</div>
+		<?php include './fragments/footer.html'; ?>
 	</main>
 </body>
 </html>
