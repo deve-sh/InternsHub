@@ -13,3 +13,100 @@ body{
 	padding: 0;
 	line-height: 1.61;
 }
+
+/* Modifying some pre-defined component styles. */
+
+.row{
+	margin: 0;
+}
+
+.container-fluid{
+	padding: 0;
+	margin: 0;
+}
+
+.fixedContainer{
+	/* Container that will span a max of 1000px and make the web page look better structured. */
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 1rem;
+}
+
+/* Header */
+
+#header{
+	padding: 0;
+	background: teal;
+	color: #ffffff;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+#header .logo{
+	font-size : 1.1rem;
+}
+
+#header a{
+	color: #ffffff;
+	text-decoration: none;
+}
+
+#menuContainer{
+	display: block;
+	text-align: right;
+}
+
+/* The side navigation menu that will appear on the page when the user is using a device with a small screen. */
+
+#sidenavContainer{
+	display: none;		/* Don't display the toggle if the user is not using a small screen device. */
+	text-align: left;
+}
+
+.sidenavOpener{
+	cursor: pointer;
+}
+
+#sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  background: #111;
+  overflow-x: hidden;
+  text-align: center;
+  padding-top: 1rem;
+  transition: 0.5s;
+}
+
+#sidenav a {
+  padding: 0.8rem;
+  text-decoration: none;
+  font-size: 1.35rem;
+  color: #818181;
+  display: block;
+  transition: 0.1s;
+}
+
+#sidenav a:hover {
+  color: #f1f1f1;
+}
+
+#sidenav .sidenavcloser {
+	display: block;
+	font-size: 1.45em;
+	padding: 1rem;
+	text-align: right;
+	cursor: pointer;
+}
+
+@media only screen and (max-width: 600px){
+	#sidenavContainer{
+		display: inline-block;		/* Display the side navigation toggle. */
+	}
+
+	#menuContainer{
+		display: none;
+	}
+}
