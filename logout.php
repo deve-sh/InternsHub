@@ -32,6 +32,7 @@
 					<div class="alert alert-success">Successfully Logged Out.</div>
 				<?php
 				header("refresh:1.5;url=./");	// Redirect home after logging out, after 1.5 seconds.
+				exit();
 			}
 			else{
 				// Else show an error message and go back home.
@@ -39,6 +40,7 @@
 					<div class="alert alert-danger">Login to logout.</div>
 				<?php
 					header("refresh:1.5;url=./");
+					exit();
 			}
 		?>
 	</div>

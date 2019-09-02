@@ -33,6 +33,9 @@
 							Kindly logout in order to register.
 						</div>
 					<?php
+
+					header("refresh:1.5;url=./");	// Redirect to home after 1.5 seconds.
+					exit();
 				}
 				else{
 					// If the user is not logged in, then render the register form.
@@ -69,6 +72,9 @@
 								<br/>
 								<br/>
 								<button type="submit" class="btn btn-primary">Signup</button>
+								 &nbsp;&nbsp;
+
+								<a href="./"><span class="btn btn-info">Home</span></a>
 							</form>
 						</div>
 					<?php
