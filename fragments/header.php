@@ -26,11 +26,11 @@
 						else{
 							// If the user is logged in, either as a student or an employer.
 							?>
+								<a href="user.php" title="Dashboard" aria-label="Dashboard">Dashboard</a>
 								<a href="logout.php" title="Logout" aria-label="Logout">Logout</a>
 							<?php
 						}
 					?>
-					<a href="contactus.php">Contact</a>
 				</div>
 			</div>
 
@@ -47,17 +47,32 @@
 		<div class="col-6">
 
 			<div id="menuContainer">
-				<a href="internships.php" title="View All Internships">Internships</a>
+				<a href="internships.php" title="View All Internships" aria-label="View All Internships">Internships</a>
 
 				&nbsp;
 				&nbsp;
 
-				<a href="login.php" title="Login">Login</a>
-				
-				&nbsp;
-				&nbsp;
+				<?php
+					if($_SESSION['int_loggedin'] && $_SESSION['int_userid']){
+						// If the user is logged in.
+						?>
+							<a href="user.php" title="Dashboard" aria-label="Dashboard">Dashboard</a>
+							&nbsp;&nbsp;
+							<a href="logout.php" title="Logout" aria-label="Logout">Logout</a>
+						<?php
+					}
+					else{
+						// Display the login and register controls.
+						?>
+							<a href="login.php" title="Login" aria-label="Login">Login</a>
+							
+							&nbsp;
+							&nbsp;
 
-				<a href="signup.php" title="Register">Register</a>
+							<a href="signup.php" title="Register" aria-label="Register">Register</a>
+						<?php
+					}
+				?>
 			</div>
 
 		</div>

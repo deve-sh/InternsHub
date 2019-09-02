@@ -35,8 +35,9 @@ CREATE TABLE internshub_internships(
 	details text default "",	-- Details of the internship. --
 	start_date date not null,
 	duration text not null,		-- n Weeks/Months, etc. --
-	stipend numeric not null,
+	stipend numeric unsigned not null check(stipend > 0),
 	apply_by date not null,
+	ninternships integer unsigned not null default 1,
 	location text not null,				-- Work From Home / Location --
 	skills_required text default ""		-- A comma seperated text with skills required. --
 );

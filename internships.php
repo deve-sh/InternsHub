@@ -152,7 +152,9 @@
 			?>
 		</div>
 
-		<?php include("./fragments/footer.html"); ?>
+		<?php
+			include("./fragments/footer.html"); // Footer
+		?>
 	</main>
 </body>
 </html>
