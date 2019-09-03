@@ -39,7 +39,7 @@
 				if($_GET['page'])
 					$pageno = $_GET['page'];
 
-				if($pageno <= 0){	// Invalid page number.
+				if($pageno <= 0 || $pageno*$intsperpage > $totalInts){	// Invalid page number.
 					$pageno = 1;
 				}
 
@@ -63,7 +63,8 @@
 				else{
 					// If there are internships then render then all of them one by one.
 
-					$currentPageInts = mysqli_query($db, "SELECT * FROM internshub_internships ORDER BY created DESC LIMIT ".$intsperpage." OFFSET ". ($pageno-1) * $intsperpage .";");
+					$currentPageInts = mysqli_query($db, 
+						"SELECT * FROM internshub_internships ORDER BY created DESC LIMIT ".$intsperpage." OFFSET ". ($pageno-1) * $intsperpage .";");
 
 					// Variables that decide whether there is a next or previous page.
 

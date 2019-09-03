@@ -224,7 +224,7 @@ body{
 	font-weight: bold;
 }
 
-.internshipPage .int-description{
+.int-description{
 	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 	font-weight: 400;
     font-size: 1rem;
@@ -261,6 +261,38 @@ body{
 textarea{
 	padding: 0.65rem;
 	min-height: 40vh;
+}
+
+/* Applications Viewing Page */
+
+.application{
+	border: 0.1rem solid #cfcfcf;
+	border-radius: 0.35rem;
+	padding: 1rem;
+}
+
+.application .int-title{
+	font-size: 1.3rem;
+	font-weight: bold;
+}
+
+.application .created, .applicationPage .created{
+	font-size: 0.88rem;
+	color: grey;
+	display: block;
+	margin: 0.7rem 0;
+}
+
+.contactdetails{
+	padding:1rem;
+	border: 0.1rem solid #cfcfcf;
+	text-align: center;
+	color: #212121;
+}
+
+.contactdetails a{
+	color: #212121;
+	text-decoration: none;
 }
 
 /* Footer */

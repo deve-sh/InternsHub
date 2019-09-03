@@ -46,8 +46,10 @@ CREATE TABLE internshub_internships(
 
 CREATE TABLE internshub_applications(
 	appid integer primary key auto_increment,
+	employerid integer references internshub_users(userid) on delete cascade on update set null,
 	intid integer references internshub_internships(intid) on delete cascade on update set null,
-	userid integer references internshub_users(userid) on delete cascade on update set null,
+	applicantid integer references internshub_users(userid) on delete cascade on update set null,
 	created timestamp,
 	details text default ""
+	-- approved boolean default 0--
 );

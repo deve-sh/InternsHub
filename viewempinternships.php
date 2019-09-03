@@ -61,7 +61,7 @@
 				if($_GET['page'])
 					$pageno = $_GET['page'];
 
-				if($pageno <= 0){	// Invalid page number.
+				if($pageno <= 0 || $pageno*$intsperpage > $totalInts){	// Invalid page number.
 					$pageno = 1;
 				}
 
