@@ -16,7 +16,7 @@
 
 	<?php include ('./fragments/head.html'); ?>
 </head>
-<body>
+<body onload="optionsRemover()">
 	<main class="container-fluid">
 		<?php include './fragments/header.php'; ?>
 

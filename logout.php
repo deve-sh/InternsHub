@@ -15,7 +15,7 @@
 	</title>
 	<?php include './fragments/head.html'; ?>
 </head>
-<body>
+<body onload='optionsREmover()'>
 	<main class="container-fluid">
 	<?php
 		include './fragments/header.php';

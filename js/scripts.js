@@ -14,3 +14,19 @@ function closeSN(){
 
 	document.getElementById('sidenav').style.width = "0";
 }
+
+function optionsRemover(){
+	// Function to hide the dashboard and logout functions while the user is on the logout or other sensitive page.
+	// This is to avoid abuse of the header bar.
+
+	if(window.location.toString().includes('logout.php')
+		|| window.location.toString().includes('login-conf.php')
+		|| window.location.toString().includes('signup-conf.php')){
+		// Hide Main Menu.
+		document.getElementById('menuContainer').style.display = "none";
+
+		// Hide Sidenav if the user is on a small screen device.
+
+		document.getElementById('sidenavContainer').style.display = "none";
+	}
+}

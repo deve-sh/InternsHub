@@ -115,6 +115,14 @@
                 <br/>
 
                 Nothing more here. ;)
+
+                <?php 
+                	if(!$user['isemployer']){
+                		?>
+                			Keep Searching!
+                		<?php
+                	}
+                ?>
             </div>
 		</div>
 
