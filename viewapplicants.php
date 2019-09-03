@@ -127,7 +127,7 @@
 					echo "
 						<div class='application'>
 							<span>
-								For : <a href='./intership.php?intid=".$internship['intid']."'>
+								For : <a href='./internship.php?intid=".$internship['intid']."'>
 										<span class='int-title'>".$internship['title']."</span>
 									  </a>
 							</span>

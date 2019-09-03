@@ -174,13 +174,13 @@
 						<br/>
 
 						<label for="location">
-							Location :
+							Location(s) :
 						</label>
 
 						<input type="text" 
 							class="form-control" 
 							name="location" 
-							placeholder="Work From Home / Location"
+							placeholder="Work From Home / Location(s)"
 							required />
 
 						<br/>

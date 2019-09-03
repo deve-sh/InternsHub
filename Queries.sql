@@ -50,6 +50,7 @@ CREATE TABLE internshub_applications(
 	intid integer references internshub_internships(intid) on delete cascade on update set null,
 	applicantid integer references internshub_users(userid) on delete cascade on update set null,
 	created timestamp,
+	
 	details text default ""
 	-- approved boolean default 0--
 );
