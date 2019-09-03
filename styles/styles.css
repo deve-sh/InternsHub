@@ -214,6 +214,32 @@ body{
 	font-weight: bold;
 }
 
+/* User Dashboard Styles */
+
+.dashboard {
+	min-height: 85vh;
+}
+
+.user-option{
+	background: teal;
+	padding: 1rem;
+	min-width: 80%;
+	max-width: 90%;
+	display: inline-block;
+	border-radius: 0.3rem;
+	margin: 0.5rem auto;
+	color: white;
+	cursor: pointer;
+	text-decoration: none;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.user-option a{
+	color: white;
+	text-decoration: none;
+}
+
 /* Footer */
 
 #footer{
