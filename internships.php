@@ -32,7 +32,7 @@
 
 				$totalInts = mysqli_num_rows($allInternships);		// Total number of internships in the database.
 
-				$intsperpage = 2;		// The number of internships to display on one page.
+				$intsperpage = 10;		// The number of internships to display on one page.
 
 				// Check if a page no has been passed to the page.
 

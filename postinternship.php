@@ -49,13 +49,6 @@
 					exit();
 				}
 
-				// If the user is in fact an employer, then render a form for the employer.
-
-				// Save some details to store in the database later.
-
-				$userid = $user['userid'];
-				$emname = $user['name'];
-
 				?>
 					<br/>
 					<form action="pi-conf.php" method="POST">
@@ -100,8 +93,9 @@
 								<input 
 									type="date" 
 									class="form-control" 
-									required name="start_date" 
-									min = <?php date("Y-m-d"); ?>>
+									required 
+									name="start_date" 
+									min = <?php echo date("Y-m-d"); ?>>
 							</div>
 							<div class="col-sm-6 nopadding">
 								<br/>
@@ -110,25 +104,57 @@
 								</label>
 
 								<div class="row">
-									<div class="col-4">
+									<div class="col-4 nopadding">
 										<input 
-										type="number" 
-										class="form-control" 
-										name="duration_1" 
-										min="1"
-										placeholder="0-20" 
-										max="20" 
-										required/>
+											type="number" 
+											class="form-control"
+											name="duration_1" 
+											min="1"
+											placeholder="0-20" 
+											max="20" 
+											required/>
 									</div>
 
-									<div class="col-8">
+									<div class="col-8 nopadding">
 										<select class="form-control" name="duration_2">
-											<option selected>Months</option>
-											<option>Weeks</option>
+											<option selected value="Month(s)">
+												Month(s)
+											</option>
+											<option value="Week(s)">
+												Week(s)
+											</option>
 										</select>
 									</div>
 
 								</div>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-sm-6 nopadding">
+								<br/>
+								<label for="apply_by">
+									Apply By :
+								</label>
+								<input 
+									type="date"
+									class="form-control"
+									min="<?php echo date("Y-m-d"); ?>"
+									name="apply_by" 
+									required />
+							</div>
+							<div class="col-sm-6 nopadding">
+								<br/>
+								<label for="ninternships">
+									Number of Internships : 
+								</label>
+								<input
+									type="number" 
+									class="form-control" 
+									name="ninternships" 
+									min="1"
+									required
+									placeholder="Minimum 1." />
 							</div>
 						</div>
 
