@@ -1,5 +1,6 @@
 <?php
 	// Page to display all the details of an application.
+	// Only the user that has applied to the internship and the employer who created the internship can view this page.
 
 	session_start();
 	require_once("./inc/config.php");
@@ -9,7 +10,7 @@
 	if(!$appid){
 		// If no appid has been passed. Redirect to applications page.
 
-		header("refresh:0;url=viewapplications.php");
+		header("refresh:0;url=user.php");
 		exit();
 	}
 ?>
@@ -61,17 +62,6 @@
 
 				$user = mysqli_fetch_assoc($user);
 
-				if(!$user['isemployer']){
-					?>
-						<div class="alert alert-danger">
-							You are not authorised to view this page.
-						</div>
-					<?php
-
-					header("refresh:1.5;url=./user.php");
-					exit();
-				}
-
 				// ------------------------------------------
 				// Now checking if the employer is the creator of the internship.
 				// ------------------------------------------
@@ -94,7 +84,9 @@
 
 				$application = mysqli_fetch_assoc($application);
 
-				if($_SESSION['int_userid'] != $application['employerid']){
+				if($_SESSION['int_userid'] != $application['employerid'] 
+					&& $_SESSION['int_userid'] != $application['applicantid']
+				){
 
 					// Current User ID and application's employerid do not match.
 
@@ -150,6 +142,7 @@
 
 				echo "
 					<div class='applicationPage'>
+						<br/>
 						<h3>
 							<a href='./internship.php?intid=".$application['intid']."'>
 								".$internship['title']."
@@ -191,10 +184,17 @@
 
 						<br/>
 
-						<strong>
-							Applicant Skillset
-						</strong> : ".$applicant['skills']."
-						
+						";
+
+
+						if(strlen($applicant['skills']) > 0){
+							echo "
+							<strong>
+								Applicant Skillset
+							</strong> : ".$applicant['skills']."";
+						}
+
+					echo "	
 					</div>
 				";
 			?>

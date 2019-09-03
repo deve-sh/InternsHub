@@ -295,6 +295,10 @@ textarea{
 	text-decoration: none;
 }
 
+.applicationPage a{
+	text-decoration: none;
+}
+
 /* Footer */
 
 #footer{

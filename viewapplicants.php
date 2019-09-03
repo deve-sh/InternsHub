@@ -79,6 +79,9 @@
 						.($pageno-1)*$appsperpage.";"
 				);
 
+				$prev = false;
+				$next = false;
+
 				// Rendering each application one by one.
 
 				while($application = mysqli_fetch_assoc($pageApplications)){
@@ -151,12 +154,55 @@
 				}
 			?>
 
+			<?php
+
+				// Now checking if there is a further page to display.
+
+				if($pageno*$appsperpage > $appsperpage && $totalApps > $appsperpage)
+                    $prev = true;
+
+                if($pageno*$appsperpage < $totalApps)
+                    $next = true;
+
+                // Displaying the pagination buttons.
+
+                ?>
+
+                <div align="center">
+	                <ul class="pager">
+	                	<?php
+	                		if($prev){
+	                			?>
+	                				<li class='previous'>
+	                					<a href="./viewapplicants.php?page=<?php echo $pageno - 1; ?>">
+	                						<i class="fas fa-arrow-circle-left fa-lg"></i>
+	                					</a>
+	                				</li>
+	                			<?php
+	                		}
+
+	                		if($next){
+	                			?>
+	                				<li class="next">
+	                					<a href="./viewapplicants.php?page=<?php echo $pageno + 1; ?>">
+	                						<i class="fas fa-arrow-circle-right fa-lg"></i>
+	                					</a>
+	                				</li>
+	                			<?php
+	                		}
+	                	?>
+	                </ul>
+	                <br/>
+	            </div>
+		    <?php
+		    ?>
+
 			<div align="center">
 				<div class="bottomLine"></div>
 			</div>
 		</div>
 
-		<?php include './fragments/footer.php'; ?>
+		<?php include './fragments/footer.html'; ?>
 	</main>
 </body>
 </html>

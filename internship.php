@@ -54,6 +54,7 @@
 					echo "<div class='int-empname'>".$internship['empname']."</div><br/>";
 					echo "<div class='int-location'>Location(s) : ".$internship['location']."</div><br/>";
 
+					echo "<strong><u>Details</u></strong> : <br/><br/>";
 					echo "<pre class='int-description'>".$internship['details']."</pre><br/><br/>";
 
 					echo "<div class='row int-details'>";
@@ -138,7 +139,7 @@
 
 								$validation = mysqli_query($db, 
 									"SELECT * FROM internshub_applications
-										WHERE userid = '".$_SESSION['int_userid']."'
+										WHERE applicantid = '".$_SESSION['int_userid']."'
 										AND intid = '".$intid."'");
 								
 								if($_SESSION['int_userid'] != $internship['userid']){
