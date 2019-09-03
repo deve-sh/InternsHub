@@ -54,7 +54,7 @@
 					echo "<div class='int-empname'>".$internship['empname']."</div><br/>";
 					echo "<div class='int-location'>Location(s) : ".$internship['location']."</div><br/>";
 
-					echo $internship['details']."<br/><br/>";
+					echo "<pre class='int-description'>".$internship['details']."</pre><br/><br/>";
 
 					echo "<div class='row int-details'>";
 
@@ -118,7 +118,8 @@
 
 						// First checking if the user is an employer.
 
-						$user = mysqli_query($db, "SELECT * FROM internshub_users WHERE userid = '".$_SESSION['int_userid']."'");
+						$user = mysqli_query($db, 
+							"SELECT * FROM internshub_users WHERE userid = '".$_SESSION['int_userid']."'");
 
 						if(mysqli_num_rows($user) == 0){
 							// Invalid User.
@@ -135,7 +136,10 @@
 
 								// Now checking if the user has already applied for the internship.
 
-								$validation = mysqli_query($db, "SELECT * FROM internshub_applications WHERE userid = '".$_SESSION['int_userid']."' AND intid = '".$intid."'");
+								$validation = mysqli_query($db, 
+									"SELECT * FROM internshub_applications
+										WHERE userid = '".$_SESSION['int_userid']."'
+										AND intid = '".$intid."'");
 								
 								if($_SESSION['int_userid'] != $internship['userid']){
 									

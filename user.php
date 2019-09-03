@@ -69,6 +69,15 @@
 									<i class="fas fa-book fa-lg"></i> &nbsp;View all your created Internships
 								</a>
 							</div>
+
+							<br/>
+							<br/>
+
+							<div class="user-option">
+								<a href="./viewapplicants.php">
+									<i class="fas fa-copy fa-lg"></i> &nbsp;View Applications
+								</a>
+							</div>
 						</div>
 					<?php
 				}

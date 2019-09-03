@@ -82,6 +82,12 @@
 							<br/>
 
 							<button type="submit" class="btn btn-primary">Update</button>
+
+							&nbsp;
+
+							<a href="./user.php">
+								<span class="btn btn-info">Back</span>
+							</a>
 						</form>
 						<?php
 					}
