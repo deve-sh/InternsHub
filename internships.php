@@ -32,7 +32,7 @@
 
 				$totalInts = mysqli_num_rows($allInternships);		// Total number of internships in the database.
 
-				$intsperpage = 10;		// The number of internships to display on one page.
+				$intsperpage = 2;		// The number of internships to display on one page.
 
 				// Check if a page no has been passed to the page.
 
@@ -126,13 +126,21 @@
 		                	<?php
 		                		if($prev){
 		                			?>
-		                				<li class='previous'><a href="./internships.php?page=<?php echo $pageno - 1; ?>">Prev</a></li>
+		                				<li class='previous'>
+		                					<a href="./internships.php?page=<?php echo $pageno - 1; ?>">
+		                						<i class="fas fa-arrow-circle-left fa-lg"></i>
+		                					</a>
+		                				</li>
 		                			<?php
 		                		}
 
 		                		if($next){
 		                			?>
-		                				<li class="next"><a href="./internships.php?page=<?php echo $pageno + 1; ?>">Next</a></li>
+		                				<li class="next">
+		                					<a href="./internships.php?page=<?php echo $pageno + 1; ?>">
+		                						<i class="fas fa-arrow-circle-right fa-lg"></i>
+		                					</a>
+		                				</li>
 		                			<?php
 		                		}
 		                	?>

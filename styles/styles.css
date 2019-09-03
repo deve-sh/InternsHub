@@ -32,6 +32,14 @@ body{
 	padding: 1rem;
 }
 
+.nopadding{
+	padding: 0;
+}
+
+.nomargin{
+	margin: 0;
+}
+
 /* Header */
 
 #header{
@@ -176,17 +184,19 @@ body{
 .pager .previous, .pager .next{
 	background-color: #fff;
     border: 1px solid #ddd;
-    padding: 0.4rem 1rem;
+    padding: 1rem;
+    display: inline-block;
     border-radius: 0.5rem;
 }
 
 .pager a{
 	text-decoration: none;
+	color: #333333;
 }
 
 .bottomLine{
 	border: none;
-	height: 0.15rem;
+	height: 0.12rem;
 	background: #afafaf;
 	width: 60%;
 }
@@ -240,6 +250,11 @@ body{
 	text-decoration: none;
 }
 
+textarea{
+	padding: 0.65rem;
+	min-height: 40vh;
+}
+
 /* Footer */
 
 #footer{
@@ -255,6 +270,14 @@ body{
 
 #footer .fixedContainer{
 	padding: 2rem;
+}
+
+/* Some miscellaneous styles */
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
 }
 
 /* Styles for a responsive app. */

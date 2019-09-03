@@ -43,7 +43,7 @@
 
 				$user = mysqli_fetch_assoc($user);	// Getting the user object as an iterable array of key value pairs.
 
-				echo "Welcome ".$user['name'];
+				echo "<br/>Welcome ".$user['name'];
 
 				if($user['isemployer'] == 1){
 					// If the user is an employer.
@@ -56,7 +56,7 @@
 
 						<div class="user-options" align="center">
 							<div class='user-option'>
-								<a href="./createinternship.php">
+								<a href="./postinternship.php">
 									<i class="fas fa-plus fa-lg"></i> &nbsp;Create a new Internship
 								</a>
 							</div>
@@ -90,7 +90,7 @@
 						<div class="user-options" align="center">
 							<div class="user-option">
 								<a href="addskills.php">
-									<i class="fas fa-star fa-lg"></i> &nbsp;Add Skills to your profile.
+									<i class="fas fa-star fa-lg"></i> &nbsp;Add / Update your Skills.
 								</a>
 							</div>
 						</div>
@@ -105,7 +105,7 @@
                 
                 <br/>
 
-                That's all folks!
+                Nothing more here. ;)
             </div>
 		</div>
 

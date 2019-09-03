@@ -39,7 +39,7 @@
 			<span class='logo'>
 				<a href='./' title="Home">
 					<?php
-						echo $config['appname'];
+						echo "<i class=\"fas fa-envelope-open-text fa-lg\"></i> ".$config['appname'];
 					?>
 				</a>
 			</span>
