@@ -175,7 +175,7 @@
 	                		if($prev){
 	                			?>
 	                				<li class='previous'>
-	                					<a href="./viewapplicants.php?page=<?php echo $pageno - 1; ?>">
+	                					<a href="./viewapplications.php?page=<?php echo $pageno - 1; ?>">
 	                						<i class="fas fa-arrow-circle-left fa-lg"></i>
 	                					</a>
 	                				</li>
@@ -185,7 +185,7 @@
 	                		if($next){
 	                			?>
 	                				<li class="next">
-	                					<a href="./viewapplicants.php?page=<?php echo $pageno + 1; ?>">
+	                					<a href="./viewapplications.php?page=<?php echo $pageno + 1; ?>">
 	                						<i class="fas fa-arrow-circle-right fa-lg"></i>
 	                					</a>
 	                				</li>
