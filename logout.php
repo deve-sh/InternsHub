@@ -28,6 +28,8 @@
 				$_SESSION['int_loggedin'] = false;
 				$_SESSION['int_userid'] = null;
 
+				session_destroy();		// Destroy the current session of the user.
+
 				?>
 					<div class="alert alert-success">Successfully Logged Out.</div>
 				<?php

@@ -13,7 +13,7 @@
 	<title>
 		<?php
 			echo $config["appname"];
-		?> - Login
+		?> - Signup
 	</title>
 
 	<?php include ('./fragments/head.html'); ?>
@@ -29,7 +29,7 @@
 
 				if($_SESSION['int_loggedin'] && $_SESSION['int_userid']){
 					?>
-						<div class="alert alert-danger">
+						<div class="alert alert-info">
 							Kindly logout in order to register.
 						</div>
 					<?php

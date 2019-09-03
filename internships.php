@@ -10,7 +10,7 @@
 	<title>
 		<?php
 			echo $config['appname'];
-		?> - Internships
+		?> - All Internships
 	</title>
 	<?php include ("./fragments/head.html"); ?>
 </head>

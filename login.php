@@ -27,12 +27,12 @@
 
 				if($_SESSION['int_loggedin'] && $_SESSION['int_userid']){
 					?>
-						<div class="alert alert-danger">
+						<div class="alert alert-info">
 							Already logged in.
 						</div>
 					<?php
 
-					header("refresh:1.5;url=./dashboard.php");
+					header("refresh:1.5;url=./user.php");
 					exit();
 				}
 				else{

@@ -136,18 +136,28 @@
 								// Now checking if the user has already applied for the internship.
 
 								$validation = mysqli_query($db, "SELECT * FROM internshub_applications WHERE userid = '".$_SESSION['int_userid']."' AND intid = '".$intid."'");
+								
+								if($_SESSION['int_userid'] != $internship['userid']){
+									
+									if(mysqli_num_rows($validation) == 0){
 
-								if(mysqli_num_rows($validation) == 0){
-									// If the user hasn't applied to the internship. Then show the apply button.
+										// If the user hasn't applied to the internship. Then show the apply button.
 
-									echo "
-										<a href='./apply.php?intid=".$intid."'>
-											<button class='btn btn-primary'>Apply</button>
-										</a>";
+										echo "<br/>
+										<div align='center'>
+											<a href='./apply.php?intid=".$intid."'>
+												<button class='btn btn-primary'>Apply</button>
+											</a>
+										</div>";
+									}
+									else{
+										echo "
+										<div align='center'>
+											<button class='btn btn-info' disabled>Already Applied</button>
+										</div>";
+									}
 								}
-								else{
-									echo "<button class='btn btn-info' disabled>Already Applied</button>";
-								}
+
 							}
 
 						}
