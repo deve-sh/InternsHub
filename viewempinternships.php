@@ -2,6 +2,8 @@
 	// Page to view all the internships created by an employer
 
 	session_start();
+
+	require_once('./inc/checkinstall.php');
 	require_once('./inc/config.php');
 ?>
 <!DOCTYPE html>

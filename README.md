@@ -41,13 +41,7 @@ Now, if you have all the requirements fulfilled. It's time to set up the app.
 
 **Step 1** : Extract all the contents of the ZIP File to a directory of your choice that the web server can run.
 
-**Step 2** : In your MySQLi Database, run the queries found in the file `Queries.sql`, this should create the tables needed for the web application.
-
-**Step 3** : Open `inc/config.php` using a text editor and replace the configuration variables with the values pertaining to your database and App Name of your choice.
-
-**Step 4** : If all the configuration is correct, then you should see the app in all its glory.
-
-**Note** : I had in mind the feature to have an `/install` route that would install the app itself but couldn't complete it due to time limitations.
+**Step 2** : Just open your browser, 
 
 ## Directory Structure
 

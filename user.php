@@ -2,6 +2,8 @@
 	// Page that serves as the user dashboard.
 	// It serves different views depending on the fact that the current user is a student or an employer.
 	session_start();
+	
+	require_once('./inc/checkinstall.php');
 	require_once("./inc/config.php");
 ?>
 <!DOCTYPE html>

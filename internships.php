@@ -2,6 +2,7 @@
 	session_start();
 	// Portal to view all the internships on the portal.
 
+	require_once('./inc/checkinstall.php');
 	require_once("./inc/config.php");
 ?>
 <!DOCTYPE html>

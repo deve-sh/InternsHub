@@ -4,7 +4,8 @@
 	
 	session_start();
 
-	include './inc/config.php';
+	require_once('./inc/checkinstall.php');
+	require_once('./inc/config.php');
 ?>
 <!DOCTYPE html>
 <html>

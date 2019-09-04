@@ -3,6 +3,7 @@
 	// Only the user that has applied to the internship and the employer who created the internship can view this page.
 
 	session_start();
+	require_once('./inc/checkinstall.php');
 	require_once("./inc/config.php");
 
 	$appid = $_GET['appid'];

@@ -93,8 +93,9 @@
 				}
 
 				// Now inserting all this data into config.php
+				// First creating a string to insert into config.php.
 
-				$configString = "<?php\nsession_start();";
+				$configString = "<?php\n\tsession_start();\n";
 
 				foreach ($config as $key => $value) {
 					$configString .= "\t\$config[\"".$key."\"] = \"".$value."\";\n";
@@ -108,7 +109,7 @@
 
 				$configFile = fopen("../inc/config.php", "w");		// Open the file for writing the data.
 
-				if(!fwrite($configFile, $configString)){
+				if(!fwrite($configFile, $configString)){	// Writing the string we created, to the file.
 					?>
 						<div class="alert alert-info">
 							Installation could not be completed due to some problem. Kindly try again.
@@ -124,6 +125,9 @@
 						Successfully installed Web App. Redirecting you to your web app.
 					</div>
 				<?php
+
+				session_destroy();
+				
 				header("refresh:2;url=../");
 				exit();
 			?>

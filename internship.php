@@ -2,6 +2,7 @@
 	// Internship displaying page.
 	session_start();
 
+	require_once('./inc/checkinstall.php');
 	require_once('./inc/config.php');
 
 	$intid = $_GET["intid"];

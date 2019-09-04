@@ -1,5 +1,7 @@
 <?php
 	session_start();
+
+	require_once('./inc/checkinstall.php');	// Checking if the script is installed or not.
 	require_once("./inc/config.php");		// Configuration File.
 ?>
 <!DOCTYPE html>

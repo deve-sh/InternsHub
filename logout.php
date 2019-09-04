@@ -2,8 +2,9 @@
 	// Page to logout the user if they are logged in.
 
 	session_start();
-	require_once('./inc/config.php');
 
+	require_once('./inc/checkinstall.php');
+	require_once('./inc/config.php');
 ?>
 <!DOCTYPE html>
 <html>
