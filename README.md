@@ -39,9 +39,52 @@ Before setting up the web app youself, make sure you have the following :
 
 Now, if you have all the requirements fulfilled. It's time to set up the app.
 
+### Automatic Setup
+
+The app has an `install` folder that is used to install the web app automatically. It is functional sugar over the existing app ensuring you don't have to waste much time setting the web app up.
+
+The app will automatically route to `install/` route when it is run for the first time. Take the following steps to install the app.
+
 **Step 1** : Extract all the contents of the ZIP File to a directory of your choice that the web server can run.
 
-**Step 2** : Just open your browser, 
+**Step 2** : Just turn on your web server, open your browser, and route to the directory relative to your web host in which you extracted the project. The web app should automatically redirect you to the **`/install`** route.
+
+**Step 3** : You will see a form containing all the fields required to set up the app. Fill them all correctly. And submit the form. If all the credentials are correct, then the web app should install itself automatically.
+
+Post installation, you will be redirected to the root of your app. You may see it in all its glory!
+
+### Manual Setup
+
+You can also set up the app manually if you want to. The following steps should be taken to do so : 
+
+**Step 1** : Extract all the contents of the ZIP File to a directory of your choice that the web server can run.
+
+**Step 2** : Open `inc/config.php` using a text editor and replace its contents with the following snippet and fill out all the details inside `""` :
+
+```php
+<?php
+	session_start();
+
+	$config["appname"] = "";	// Write the name of your app.
+	$config["dbhost"] = "";		// Write the name of the host your database is hosted on.
+	$config["dbuser"] = "";		// Write the name of the user that has access to your database.
+	$config["dbpass"] = "";		// Write the password of the user above.
+	$config["dbname"] = "";		// Write the name of the database that needs to be connected.
+
+	$db = mysqli_connect(
+		$config["dbhost"],
+		$config["dbuser"],
+		$config["dbpass"],
+		$config["dbname"]
+	) or die("Could not establish connection with database.");
+?>
+```
+
+**Step 3** : Open the file `Queries.sql` and run all the queries inside it in the database you connected the app to in the above.
+
+**Step 4** : The web app should be setup now if you entered the correct credentials. Turn on your web server, open your browser, and route to the directory relative to your web host in which you extracted the app.
+
+You should now be able to see your app in its full glory!
 
 ## Directory Structure
 
@@ -50,6 +93,7 @@ The directory structure of the web app looks like :
 - **files/** : Contains all the files required for the visual point of the app.
 - **fragments/** : Contains all the portions of a webpage that are used over and over again.
 - **inc/** : Contains the configuration file for the web app without which the app won't work.
+- **install/** : Contains the files necessary for the automatic installation of the app.
 - **js/** : Contains all the JavaScript required for the app.
 - **styles/** : Contains all the Styles required for the app, inline styles have not been used in order to minimize inconsistency of design.
 

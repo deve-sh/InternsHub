@@ -101,7 +101,7 @@
 					$configString .= "\t\$config[\"".$key."\"] = \"".$value."\";\n";
 				}
 
-				$configString .= "\t\$db = mysqli_connect(\n\t\$config['dbhost'],\$config['dbuser'],\$config['dbpass'],\$config['dbname']) or die(\"Could not establish connection with database.\");\n";
+				$configString .= "\n\t\$db = mysqli_connect(\n\t\$config['dbhost'],\n\t\$config['dbuser'],\n\t\$config['dbpass'],\n\t\$config['dbname']\n) or die(\"Could not establish connection with database.\");\n";
 
 				$configString .= "?>";
 
