@@ -4,6 +4,10 @@
 	Scroll down further towards the end to view the responsive components.
 */
 
+/* External Imports - Fonts */
+
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
 *{
 	box-sizing: border-box;
 }
@@ -11,6 +15,7 @@
 body{
 	margin: 0;
 	padding: 0;
+	font-family: 'Lato', sans-serif;
 	line-height: 1.61;
 }
 
@@ -40,6 +45,22 @@ body{
 	margin: 0;
 }
 
+/* Index Page */
+
+.responsiveImage{
+	max-width: 100%;
+	padding: 3rem 1rem;
+}
+
+.textColumn{
+	padding: 4rem 1rem;
+}
+
+.secondRow{
+	background: #232f34;
+	color: #ffffff;
+}
+
 /* Header */
 
 #header{
@@ -67,6 +88,10 @@ body{
 	text-align: right;
 }
 
+.orangeline{
+	background: orangered !important;
+}
+
 /* The side navigation menu that will appear on the page when the user is using a device with a small screen. */
 
 #sidenavContainer{
@@ -85,7 +110,7 @@ body{
   z-index: 100;
   top: 0;
   left: 0;
-  background: #111;
+  background: #1b2124;
   overflow-x: hidden;
   text-align: center;
   padding-top: 1rem;
@@ -111,6 +136,10 @@ body{
 	padding: 1rem;
 	text-align: right;
 	cursor: pointer;
+}
+
+#sidenav .sidenavBottom{
+	color: #818181;
 }
 
 /* Signup and Signin Page Styles */
@@ -302,7 +331,7 @@ textarea{
 /* Footer */
 
 #footer{
-	background: #212121;
+	background: #1b2124;
 	color: #ffffff;
 	padding: 0;
 }
@@ -325,6 +354,24 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 /* Styles for a responsive app. */
+
+@media only screen and (max-width: 768px){
+	.secondRow{
+		flex-direction: column-reverse;
+	}
+
+	.alignCenter-md{
+		text-align: center;
+	}
+
+	.responsiveImage{
+		padding: 2rem;
+	}
+
+	.morepadding{
+		padding: 2rem 3.5rem 0rem 3.5rem;
+	}
+}
 
 @media only screen and (max-width: 600px){
 	#sidenavContainer{

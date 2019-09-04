@@ -31,6 +31,16 @@
 							<?php
 						}
 					?>
+
+					<br/>
+
+					<div align="center" class="sidenavBottom">
+						<div class="bottomLine orangeline"></div>
+
+						<br/>
+
+						Made with a lot of <i class="fas fa-coffee fa-lg"></i>
+					</div>
 				</div>
 			</div>
 

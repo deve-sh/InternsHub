@@ -106,6 +106,26 @@
 						exit();		// Stop execution here itself.
 					}
 
+					// Also getting the number of applications on this internship in order to let the student gauge their competition.
+
+					$nApplications = mysqli_query(
+						$db,
+						"SELECT * FROM internshub_applications WHERE intid = '".$internship['intid']."'"
+					);
+
+					if($nApplications){
+						$nApplications = mysqli_num_rows($nApplications);
+					}
+					else{
+						?>
+							<div class="alert alert-danger">
+								An error occured. Kindly try again.
+							</div>
+						<?php
+
+						exit();		// Stop execution here itself.
+					}
+
 					// Now getting the details of the employer.
 
 					$user = mysqli_query($db,
@@ -144,6 +164,11 @@
 							<span class='created'>
 								".$application['created']."
 							</span>
+
+							No Of Applicants : ".$nApplications."
+
+							<br/>
+							<br/>
 
 							<a href='./application.php?appid=".$application['appid']."'>
 								<button class='btn btn-info'>
