@@ -84,24 +84,24 @@
 
 				// Sanitizing inputs.
 
-				$title = mysqli_real_escape_string($db,$_POST['title']);
+				$title = mysqli_real_escape_string($db, $_POST['title']);
 
-				$details = mysqli_real_escape_string($db,$_POST['details']);
+				$details = mysqli_real_escape_string($db, $_POST['details']);
 
-				$start_date = mysqli_real_escape_string($db,$_POST['start_date']);
+				$start_date = mysqli_real_escape_string($db, $_POST['start_date']);
 
-				$duration = mysqli_real_escape_string($db,$_POST['duration_1'])
-							." ". mysqli_real_escape_string($db,$_POST['duration_2']);	// Total duration.
+				$duration = mysqli_real_escape_string($db, $_POST['duration_1'])
+							." ". mysqli_real_escape_string($db, $_POST['duration_2']);	// Total duration.
 
-				$apply_by = mysqli_real_escape_string($db,$_POST['apply_by']);
+				$apply_by = mysqli_real_escape_string($db, $_POST['apply_by']);
 
-				$stipend = mysqli_real_escape_string($db,$_POST['stipend']);
+				$stipend = mysqli_real_escape_string($db, $_POST['stipend']);
 
-				$location = mysqli_real_escape_string($db,$_POST['location']);
+				$location = mysqli_real_escape_string($db, $_POST['location']);
 
-				$ninternships = mysqli_real_escape_string($db,$_POST['ninternships']);
+				$ninternships = mysqli_real_escape_string($db, $_POST['ninternships']);
 
-				$skills = mysqli_real_escape_string($db,$_POST['skills']);
+				$skills = mysqli_real_escape_string($db, $_POST['skills']);
 
 				// Validating dates and other fields.
 

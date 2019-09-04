@@ -94,15 +94,15 @@
 
 					// Sanitizing all inputs in order to avoid SQL Injections.
 
-					$email = mysqli_real_escape_string($db,$_POST['email']);
+					$email = mysqli_real_escape_string($db, $_POST['email']);
 
-					$password = mysqli_real_escape_string($db,$_POST['password']);
+					$password = mysqli_real_escape_string($db, $_POST['password']);
 
-					$name = mysqli_real_escape_string($db,$_POST['name']);
+					$name = mysqli_real_escape_string($db, $_POST['name']);
 
-					$phone = mysqli_real_escape_string($db,$_POST['phone']);
+					$phone = mysqli_real_escape_string($db, $_POST['phone']);
 
-					$type = mysqli_real_escape_string($db,$_POST['type']);
+					$type = mysqli_real_escape_string($db, $_POST['type']);
 
 					// Now time to check if a user with the provided email already exists in the database.
 

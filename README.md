@@ -1,7 +1,7 @@
 # InternsHub
 
 This is a PHP Web App functionally similar to Internshala.
-See it working live [here](#putlinkhere).
+See it working live [here](http://internshub.rf.gd/).
 
 ## Features
 
