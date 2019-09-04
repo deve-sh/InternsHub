@@ -156,7 +156,7 @@
 						</p>
 
 						<p>
-							".$applicant['name']."
+							<strong>Applicant Name </strong>: ".$applicant['name']."
 						</p>
 
 						<div class='row'>

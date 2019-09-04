@@ -54,3 +54,94 @@ CREATE TABLE internshub_applications(
 	details text default ""
 	-- approved boolean default 0--
 );
+
+/*
+	The following is test data you may need if you do not want to manually register users.
+	Just uncomment the following and run the entire query file.
+*/
+
+-- Creating a student. --
+
+INSERT INTO internshub_users(
+	name,
+	email,
+	password,
+	phone,
+	isemployer,
+	joined,
+	skills
+) VALUES(
+	'Student',
+	'student@student.com',
+	'$2y$10$OdVAgCBLso0oce935xMHluMcxCTgJHLhTlPgyuY1IPCszL58G0.SC',		-- This is a hash for 'password' --
+	'+91-1234567890',
+	0,
+	'2019-09-04',
+	'HTML, CSS, JS, PHP'
+);
+
+-- Creating an employer --
+
+INSERT INTO internshub_users(
+	name,
+	email,
+	password,
+	phone,
+	isemployer,
+	joined,
+	skills
+) VALUES(
+	'Employer',
+	'employer@employer.com',
+	'$2y$10$OdVAgCBLso0oce935xMHluMcxCTgJHLhTlPgyuY1IPCszL58G0.SC',		-- This is a hash for 'password' --
+	'+91-2345678901',
+	1,
+	'2019-09-04',
+	''	-- Employer does not need to have any values in the skills column. --
+);
+
+-- Creating an internship --
+
+INSERT INTO internshub_internships(
+	userid,
+	empname,
+	title,
+	details,
+	start_date,
+	duration,
+	stipend,
+	apply_by,
+	ninternships,
+	location,
+	skills_required
+)
+VALUES(
+	2,
+	'Employer',
+	'Web Development Internship',
+	"Those who are good at web development and have a sound knowledge of concepts of PHP and JS may apply.
+
+	Students are expected to devote a minimum of 2 hours each day to the Internship.",
+	'2019-12-12',
+	'2 Month(s)',
+	10000,
+	'2019-12-5',
+	3,
+	'Work From Home',
+	'PHP, JS, HTML, CSS'
+);
+
+-- Creating an application for the above internship --
+
+INSERT INTO internshub_applications(
+	employerid,
+	applicantid,
+	intid,
+	details
+)
+VALUES(
+	2,
+	1,
+	1,
+	"I am a hard worker and proficient in Web Development."
+);
