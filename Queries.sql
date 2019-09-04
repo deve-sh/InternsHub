@@ -60,8 +60,8 @@ CREATE TABLE internshub_applications(
 	Just uncomment the following and run the entire query file.
 */
 
-/*
 
+/*
 -- Creating a student. --
 
 INSERT INTO internshub_users(

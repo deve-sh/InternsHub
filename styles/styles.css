@@ -305,7 +305,7 @@ textarea{
 	font-weight: bold;
 }
 
-.application .created, .applicationPage .created{
+.application .created, .applicationPage .created, .created{
 	font-size: 0.88rem;
 	color: grey;
 	display: block;

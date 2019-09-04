@@ -12,7 +12,8 @@ Some features included in the web app are :
 - Areas specific to Student and Employers.
 - Detailed Database Schema.
 - Usage of Core PHP.
-- **Pagination**
+- **Pagination.**
+- **Self Installation Script included.**
 - Secure, as everything (Or at least most of the things) are rendered on the server side using PHP.
 - Complete splitting of the styles, scripts and the fragments to avoid bugs that come due to their mixing.
 
@@ -58,3 +59,8 @@ The directory structure of the web app looks like :
 - **js/** : Contains all the JavaScript required for the app.
 - **styles/** : Contains all the Styles required for the app, inline styles have not been used in order to minimize inconsistency of design.
 
+## Problems and Issues
+
+For any issues or problems arising out of the app, please do let me know.
+
+Just send me a message or [mail me](mailto:devesh2027@gmail.com).

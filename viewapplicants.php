@@ -66,7 +66,7 @@
 				if($_GET['page'])
 					$pageno = $_GET['page'];
 
-				if($pageno <= 0){	// Invalid page number.
+				if($pageno <= 0 || ($pageno-1)*$appsperpage >= $totalApps){	// Invalid page number.
 					$pageno = 1;
 				}
 

@@ -19,7 +19,8 @@
 		<?php include './fragments/header.php'; ?>
 
 		<div class="introPage">
-			<div class="fixedContainer firstRow row">
+			<section class="fixedContainer firstRow row">
+				
 				<div class="col-md-6">
 					<img 
 						src="./files/propel.svg" 
@@ -50,8 +51,10 @@
 						</a>
 					</p>
 				</div>
-			</div>
-			<div class="secondRow">
+
+			</section>
+			<section class="secondRow">
+
 				<div class="fixedContainer">
 					<div class="row">
 						<div class="col-md-6 textColumn">
@@ -98,7 +101,8 @@
 						</div>
 					</div>
 				</div>
-			</div>
+
+			</section>
 		</div>
 
 		<?php include './fragments/footer.html'; ?>

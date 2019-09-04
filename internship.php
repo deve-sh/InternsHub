@@ -51,7 +51,8 @@
 					$internship = mysqli_fetch_assoc($internship);
 
 					echo "<div class='int-title'>".$internship['title']."</div>";
-					echo "<div class='int-empname'>".$internship['empname']."</div><br/>";
+					echo "<div class='int-empname'>".$internship['empname']."</div>";
+					echo "<div class='created'>".$internship['created']."</div>";
 					echo "<div class='int-location'>Location(s) : ".$internship['location']."</div><br/>";
 
 					echo "<strong><u>Details</u></strong> : <br/><br/>";
