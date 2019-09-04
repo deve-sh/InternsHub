@@ -68,7 +68,7 @@
 							Invalid Database Credentials
 						</div>
 					<?php
-
+					header("refresh:1.5;url=./");
 					exit();
 				}
 
@@ -88,7 +88,7 @@
 						</div>
 					<?php
 
-					header("refresh:3;url=./");
+					header("refresh:1.5;url=./");
 					exit();
 				}
 

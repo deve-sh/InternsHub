@@ -80,7 +80,7 @@ You can also set up the app manually if you want to. The following steps should 
 ?>
 ```
 
-**Step 3** : Open the file `Queries.sql` and run all the queries inside it in the database you connected the app to in the above.
+**Step 3** : Open the file `Queries.sql` and run all the queries inside it in the database you connected the app to in the above. In case you want to add a student, an employer, an internship and an application with sample data, that is there too at the bottom of the file (Commented). Just uncomment it before running.
 
 **Step 4** : The web app should be setup now if you entered the correct credentials. Turn on your web server, open your browser, and route to the directory relative to your web host in which you extracted the app.
 
