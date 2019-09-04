@@ -356,6 +356,8 @@ input[type=number]::-webkit-outer-spin-button {
 /* Styles for a responsive app. */
 
 @media only screen and (max-width: 768px){
+	/* Styles to run on a tablet sized device. */
+	
 	.secondRow{
 		flex-direction: column-reverse;
 	}

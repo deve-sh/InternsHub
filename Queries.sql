@@ -35,7 +35,7 @@ CREATE TABLE internshub_internships(
 	details text default "",	-- Details of the internship. --
 	start_date date not null,
 	duration text not null,		-- n Weeks/Months, etc. --
-	stipend numeric unsigned not null check(stipend > 0),
+	stipend numeric unsigned not null check(stipend >= 0),
 	apply_by date not null,
 	ninternships integer unsigned not null default 1,
 	location text not null,				-- Work From Home / Location --
@@ -59,6 +59,8 @@ CREATE TABLE internshub_applications(
 	The following is test data you may need if you do not want to manually register users.
 	Just uncomment the following and run the entire query file.
 */
+
+/*
 
 -- Creating a student. --
 
@@ -145,3 +147,4 @@ VALUES(
 	1,
 	"I am a hard worker and proficient in Web Development."
 );
+*/

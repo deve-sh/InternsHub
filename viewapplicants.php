@@ -11,7 +11,7 @@
 	<title>
 		<?php
 		    echo $config['appname'];
-		?> - View Applications 
+		?> - Inernship Applications 
 	</title>
 
 	<?php include './fragments/head.html'; ?>
@@ -66,7 +66,7 @@
 				if($_GET['page'])
 					$pageno = $_GET['page'];
 
-				if($pageno <= 0 || $pageno*$appsperpage > $totalApps){	// Invalid page number.
+				if($pageno <= 0){	// Invalid page number.
 					$pageno = 1;
 				}
 

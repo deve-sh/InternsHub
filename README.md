@@ -13,6 +13,7 @@ Some features included in the web app are :
 - Detailed Database Schema.
 - Usage of Core PHP.
 - **Pagination**
+- Secure, as everything (Or at least most of the things) are rendered on the server side using PHP.
 - Complete splitting of the styles, scripts and the fragments to avoid bugs that come due to their mixing.
 
 ## Rules adhered to.
@@ -43,4 +44,17 @@ Now, if you have all the requirements fulfilled. It's time to set up the app.
 
 **Step 3** : Open `inc/config.php` using a text editor and replace the configuration variables with the values pertaining to your database and App Name of your choice.
 
-**Step 4** : If all the configuration is correct, then you should see all of your 
+**Step 4** : If all the configuration is correct, then you should see the app in all its glory.
+
+**Note** : I had in mind the feature to have an `/install` route that would install the app itself but couldn't complete it due to time limitations.
+
+## Directory Structure
+
+The directory structure of the web app looks like : 
+
+- **files/** : Contains all the files required for the visual point of the app.
+- **fragments/** : Contains all the portions of a webpage that are used over and over again.
+- **inc/** : Contains the configuration file for the web app without which the app won't work.
+- **js/** : Contains all the JavaScript required for the app.
+- **styles/** : Contains all the Styles required for the app, inline styles have not been used in order to minimize inconsistency of design.
+
