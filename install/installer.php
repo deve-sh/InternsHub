@@ -3,6 +3,7 @@
 	session_start();
 
 	require_once('./installchecker.php');
+	require_once('../inc/escaper.php');
 ?>
 <!DOCTYPE html>
 <html>
@@ -52,11 +53,11 @@
 
 				// Sanitizing inputs.
 
-				$config['appname'] = mysql_real_escape_string($_POST['appname']);
-				$config['dbhost'] = mysql_real_escape_string($_POST['dbhost']);
-				$config['dbname'] = mysql_real_escape_string($_POST['dbname']);
-				$config['dbuser'] = mysql_real_escape_string($_POST['dbuser']);
-				$config['dbpass'] = mysql_real_escape_string($_POST['dbpass']);
+				$config['appname'] = escapeStr($_POST['appname']);
+				$config['dbhost'] = escapeStr($_POST['dbhost']);
+				$config['dbname'] = escapeStr($_POST['dbname']);
+				$config['dbuser'] = escapeStr($_POST['dbuser']);
+				$config['dbpass'] = escapeStr($_POST['dbpass']);
 
 				// Checking if the database credentials are correct or not.
 

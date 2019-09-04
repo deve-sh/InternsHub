@@ -51,8 +51,8 @@
 
 				// Sanitizing all the inputs to avoid SQL Injection.
 
-				$email = mysql_real_escape_string($_POST['email']);
-				$password = mysql_real_escape_string($_POST['password']);
+				$email = mysqli_real_escape_string($db, $_POST['email']);
+				$password = mysqli_real_escape_string($db, $_POST['password']);
 
 				// No need to validate the inputs. 
 				// If they are wrong, they will automatically not match any entry in the DB,

@@ -80,6 +80,22 @@
 						.($pageno-1)*$appsperpage.";"
 				);
 
+				if(mysqli_num_rows($pageApplications) <= 0){
+					// No applicants found.
+				?>
+					<div align="center" style="margin: 9.75rem 0;">
+						<!-- Position this at almost the center of the screen. -->
+						<div class="roundedIcon">
+							<i class="fas fa-users fa-3x"></i>
+						</div>
+						<br/>
+						<br/>
+						No Applicants found.
+					</div>
+				<?php
+
+				}
+
 				$prev = false;
 				$next = false;
 

@@ -31,7 +31,7 @@
 
 						// Sanitizing the input.
 
-						$skills = mysql_real_escape_string($_POST['skills']);
+						$skills = mysqli_real_escape_string($db, $_POST['skills']);
 
 						$updation = mysqli_query($db, "UPDATE internshub_users SET skills = '".$skills."' WHERE userid = '".$_SESSION['int_userid']."'");
 

@@ -16,7 +16,7 @@ CREATE TABLE internshub_users(
 	phone varchar(25) not null,
 	isemployer boolean default 0,
 	joined date not null,
-	skills text default ""
+	skills text
 );
 
 -- Internships Table --
@@ -32,14 +32,14 @@ CREATE TABLE internshub_internships(
 	-- Fields to be filled in by the employer. --
 
 	title varchar(255) not null default "",
-	details text default "",	-- Details of the internship. --
+	details text,	-- Details of the internship. --
 	start_date date not null,
 	duration text not null,		-- n Weeks/Months, etc. --
 	stipend numeric unsigned not null check(stipend >= 0),
 	apply_by date not null,
 	ninternships integer unsigned not null default 1,
 	location text not null,				-- Work From Home / Location --
-	skills_required text default ""		-- A comma seperated text with skills required. --
+	skills_required text		-- A comma seperated text with skills required. --
 );
 
 -- Applications Table --
@@ -51,7 +51,7 @@ CREATE TABLE internshub_applications(
 	applicantid integer references internshub_users(userid) on delete cascade on update set null,
 	created timestamp,
 	
-	details text default ""
+	details text
 	-- approved boolean default 0--
 );
 

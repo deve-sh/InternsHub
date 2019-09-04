@@ -127,7 +127,7 @@
 
 					// Sanitizing input.
 
-					$details = mysql_real_escape_string($_POST['details']);
+					$details = mysqli_real_escape_string($db, $_POST['details']);
 
 					$employerid = $internship['userid'];
 

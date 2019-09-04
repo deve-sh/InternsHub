@@ -81,6 +81,22 @@
 						.($pageno-1)*$appsperpage.";"
 				);
 
+				if(mysqli_num_rows($pageApplications) <= 0){
+					// No applications found on this page.
+				?>
+					<div align="center" style="margin: 9.75rem 0;">
+						<!-- Position this at almost the center of the screen. -->
+						<div class="roundedIcon">
+							<i class="fas fa-folder-open fa-4x"></i>
+						</div>
+						<br/>
+						<br/>
+						No Applications found.
+					</div>
+				<?php
+
+				}
+
 				$prev = false;
 				$next = false;
 
