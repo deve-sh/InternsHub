@@ -123,7 +123,7 @@ VALUES(
 	'Web Development Internship',
 	"Those who are good at web development and have a sound knowledge of concepts of PHP and JS may apply.
 
-	Students are expected to devote a minimum of 2 hours each day to the Internship.",
+Students are expected to devote a minimum of 2 hours each day to the Internship.",
 	'2019-12-12',
 	'2 Month(s)',
 	10000,
